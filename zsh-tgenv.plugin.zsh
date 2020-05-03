@@ -1,6 +1,6 @@
 GITHUB="https://github.com"
 
-[[ -z "$TGFENV_HOME" ]] && export TGENV_HOME="$HOME/.tgenv"
+[[ -z "$TGENV_HOME" ]] && export TGENV_HOME="$HOME/.tgenv"
 
 _zsh_tgenv_install() {
     echo "Installing tgenv..."
