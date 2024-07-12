@@ -39,7 +39,7 @@ _zsh_tgenv_log() {
 _zsh_tgenv_install() {
   _zsh_tgenv_log $NONE "blue" "#################################"
   _zsh_tgenv_log $BOLD "blue" "Installing tgenv..." 
-  git clone "${GITHUB}/cunymatthieu/tgenv.git" "${TGENV_HOME}" >> /dev/null
+  git clone "${GITHUB}/tgenv/tgenv.git" "${TGENV_HOME}" >> /dev/null
   _zsh_tgenv_log $BOLD "green" "Install OK"
   _zsh_tgenv_log $NONE "blue" "#################################"
 }
@@ -49,7 +49,7 @@ update_zsh_tgenv() {
   _zsh_tgenv_log $BOLD "blue" "Updating tgenv..."
 
   pushd "${TGENV_HOME}" > /dev/null
-  if git pull --rebase --stat origin master
+  if git pull --rebase --stat origin main
     then
       _zsh_tgenv_log $BOLD "green" "tgenv has been updated and/or is at the last version."
       popd > /dev/null
